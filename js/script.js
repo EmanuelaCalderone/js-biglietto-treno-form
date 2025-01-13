@@ -1,9 +1,11 @@
 //assegno le variabili di input
+const nomeField = document.getElementById('nome_field');
 const etaField = document.getElementById('eta_field');
 const kmField = document.getElementById('km_field');
 const form = document.querySelector('form');
 
 //assegno le variabili di output
+const nome = document.getElementById('nome_utente');
 const eta = document.getElementById('eta_utente');
 const km = document.getElementById('chilometri_utente');
 const costo_biglietto = document.getElementById('costo_biglietto');
@@ -27,6 +29,7 @@ form.addEventListener('submit', (event) => {
     }
 
     //associo i valori di input con quelli di output
+    nome.innerHTML = nomeField.value.trim();
     km.innerHTML = kmField.value.trim();
     eta.innerHTML = etaField.value.trim();
     costo_biglietto.innerHTML = "€ " + prezzo.toFixed(2);
@@ -37,9 +40,11 @@ form.addEventListener('submit', (event) => {
     let submitted = true;
     //creo le condizioni
     if (submitted) {
+        nomeField.value = "";
         etaField.value = "";
         kmField.value = "";
     } else {
+        nomeField.value = nome.innerHTML;
         kmField.value = km.innerHTML;
         etaField.value = eta.innerHTML;
     }

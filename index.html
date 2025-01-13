@@ -7,29 +7,70 @@
     <title>Biglietti treno</title>
 </head>
 <body>
-    
-    <!--form-->
-    <form action="#" autocomplete="off">
 
-        <!--campo età-->
-        <label for="età">Età</label>
-        <input type="number" id="eta_field" placeholder="Inserisci la tua età" required>
+    <main id="container">
 
-        <!--campo km-->
-        <label for="Chilometri">Quanti km percorrerai?</label>
-        <input type="number" id="km_field" placeholder="Inserisci i km" required>
+        <!--sezione info e tariffe-->
+        <section id="info">
+            <!--tariffe-->
+            <div id="tariffe">
+                    <h6>Info tariffe</h6>
+                    <p>Minorenni: sconto 20%</p>
+                    <p>Maggiorenni: prezzo intero (€ 0.21/km)</p>
+                    <p>Over 65: sconto 40%</p>
+            </div>
+        
+        <!--logo-->
+            <div id="logo">
+                <img src="./img/logo.png" alt="logo">
+                <p id="nome_logo">EC TRASPORTI</p>
+            </div>
 
-        <!--pulsante invia-->
-        <input type="submit" value="Calcola" id="invia">
-    </form>
+        </section>
+        
+        <!--form-->
+        <form action="#" autocomplete="off">
+            <div class="dati">
+                <label for="nome_field">Nome e Cognome</label>
+                <input type="text" id="nome_field" placeholder="Inserisci il tuo nome completo" required>
+            </div>
 
-    <!--biglietto-->
-    <div id="biglietto">
-        <p>Età: <span id="eta_utente"></span></p>
-        <p>Chilometri: <span id="chilometri_utente"></span></p>
-        <p>Costo biglietto: <span id="costo_biglietto"></span></p>
-    </div>
+            <!--campo età-->
+            <div class="dati">
+                <label for="eta_field">Età</label>
+                <input type="number" id="eta_field" placeholder="Inserisci la tua età" required>
+            </div>
+            
 
+            <!--campo km-->
+            <div class="dati">
+                <label for="km_field">Quanti km percorrerai?</label>
+                <input type="number" id="km_field" placeholder="Inserisci i km" required>
+            </div>
+            
+            <!--pulsante invia-->
+            <div id="pulsante">
+                <input type="submit" value="GENERA IL TUO BIGLIETTO" id="invia">
+            </div>
+
+        </form>
+
+        <!--biglietto-->
+        <div id="biglietto">
+            <!--nome passeggero-->
+            <div id="nome_passeggero">
+                <p>NOME PASSEGGERO </p>
+                <p id="nome_utente"></p>
+            </div>
+            <!--altri dati bilglietto-->
+            <div id="dettagli_biglietto">
+                <p>Età <span id="eta_utente"></span></p>
+                <p>Chilometri <span id="chilometri_utente"></span></p>
+                <p>Costo biglietto <span id="costo_biglietto"></span></p>
+            </div>
+        </div>
+
+    </main>
 
     <script src="./js/script.js"></script>
 </body>
