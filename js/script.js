@@ -9,6 +9,8 @@ const nome = document.getElementById('nome_utente');
 const eta = document.getElementById('eta_utente');
 const km = document.getElementById('chilometri_utente');
 const costo_biglietto = document.getElementById('costo_biglietto');
+const carrozza = document.getElementById('carrozza')
+const codice_prenotazione = document.getElementById('codice_prenotazione')
 const download = document.getElementById('download');
 
 
@@ -35,6 +37,12 @@ form.addEventListener('submit', (event) => {
     km.innerHTML = kmField.value.trim();
     eta.innerHTML = etaField.value.trim();
     costo_biglietto.innerHTML = "€ " + prezzo.toFixed(2);
+
+    //genero numero random per n.carrozza
+    carrozza.innerHTML = Math.floor(Math.random() * 20) + 1;
+
+    //genero numero random per codice di prenotazione
+    codice_prenotazione.innerHTML = Math.floor(Math.random() * 10000) + 1;
 
     //mostro la sezione download
     download.classList.remove('hidden');
