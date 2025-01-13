@@ -9,6 +9,8 @@ const nome = document.getElementById('nome_utente');
 const eta = document.getElementById('eta_utente');
 const km = document.getElementById('chilometri_utente');
 const costo_biglietto = document.getElementById('costo_biglietto');
+const download = document.getElementById('download');
+
 
 //creo l'evento al click del bottone per associare le variabili di input e output
 
@@ -33,6 +35,10 @@ form.addEventListener('submit', (event) => {
     km.innerHTML = kmField.value.trim();
     eta.innerHTML = etaField.value.trim();
     costo_biglietto.innerHTML = "€ " + prezzo.toFixed(2);
+
+    //mostro la sezione download
+    download.classList.remove('hidden');
+    download.classList.add('show');
 
     //aggiungo condizione per svuotare i campi dopo il click
 
