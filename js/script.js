@@ -29,7 +29,7 @@ form.addEventListener('submit', (event) => {
     //associo i valori di input con quelli di output
     km.innerHTML = kmField.value.trim();
     eta.innerHTML = etaField.value.trim();
-    costo_biglietto.innerHTML = prezzo.toFixed(2);
+    costo_biglietto.innerHTML = "€ " + prezzo.toFixed(2);
 
 })
 
