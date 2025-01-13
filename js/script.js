@@ -50,3 +50,8 @@ form.addEventListener('submit', (event) => {
 
 //stampo il costo in console
 console.log("Pagherai € " + prezzo.toFixed(2));
+
+//funzione per resettare i valori dei campi al refresh della pagina
+window.onload = function() {
+    document.getElementById('form').reset();
+};
