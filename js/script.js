@@ -31,8 +31,22 @@ form.addEventListener('submit', (event) => {
     eta.innerHTML = etaField.value.trim();
     costo_biglietto.innerHTML = "€ " + prezzo.toFixed(2);
 
-})
+    //aggiungo condizione per svuotare i campi dopo il click
+
+    //inizializzo la variabile a true
+    let submitted = true;
+    //creo le condizioni
+    if (submitted) {
+        etaField.value = "";
+        kmField.value = "";
+    } else {
+        kmField.value = km.innerHTML;
+        etaField.value = eta.innerHTML;
+    }
+    //cambio lo stato della variabile
+    submitted=false;
+
+});
 
 //stampo il costo in console
 console.log("Pagherai € " + prezzo.toFixed(2));
-
